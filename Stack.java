@@ -12,7 +12,7 @@ public class Stack<T> {
 	 */
 	public T top() throws StackEmptyException {
 		if (stack.size() == 0) {
-			throw new StackEmptyException("The stack is empty!");
+			throw new StackEmptyException("The stack is empty.");
 		} else
 			return stack.get(stack.size() - 1);
 	}
@@ -41,17 +41,33 @@ public class Stack<T> {
 			return elem;
 		}
 	}
-
+	
+	/**
+	 * This method returns the size of the stack.
+	 * 
+	 * @return
+	 */
 	public int size() {
 		return stack.size();
 	}
-
+	/**
+	 * This method returns true if the stack is empty and false otherwise.
+	 * 
+	 * @return
+	 */
 	public boolean isEmpty() {
 		if (stack.isEmpty()) {
 			return true;
 		} else
 			return false;
-
 	}
+
+	@Override
+	public String toString() {
+		return "Stack:\n		["
+				+ "stack=" + stack + ""
+						+ "] \n";
+	}
+	
 
 }
