@@ -1,3 +1,4 @@
+package com.datastructure.amirnasiri;
 
 public class NodeSLL<T> {
 	private T data;
@@ -20,7 +21,7 @@ public class NodeSLL<T> {
 		this.data = data;
 		this.next = next;
 	}
-	
+
 	public T getData() {
 		return data;
 	}

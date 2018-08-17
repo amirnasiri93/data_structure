@@ -1,3 +1,4 @@
+package com.datastructure.amirnasiri;
 
 public class SinglyLinkedList<T> {
 	// the head of the singly linked list.
@@ -57,7 +58,6 @@ public class SinglyLinkedList<T> {
 			}
 
 		}
-
 		return counter;
 	}
 

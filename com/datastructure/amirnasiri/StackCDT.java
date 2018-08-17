@@ -1,3 +1,4 @@
+package com.datastructure.amirnasiri;
 /**
  * @author amirnasiri This class creates a StackCDT. Date: 17/08/18
  */
@@ -93,13 +94,3 @@ public class StackCDT<T> {
 		}
 	}
 }
-
-/**
- * 
- * Push(e): insert e at the top of the stack. • Pop(): remove the element at the
- * top of the stack. • Size(): number of element in the stack. • isEmpty():check
- * whether the stack is empty. • Top(): returns the element at the top of the
- * stack.
- * 
- * 
- */
