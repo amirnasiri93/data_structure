@@ -3,21 +3,24 @@ public class NodeSLL<T> {
 	private T data;
 	private NodeSLL<T> next;
 
+	// constructor
 	public NodeSLL() {
 		this.data = null;
 		this.next = null;
 	}
 
+	// constructor
 	public NodeSLL(T data) {
 		this.data = data;
 		this.next = null;
 	}
 
+	// constructor
 	public NodeSLL(T data, NodeSLL<T> next) {
 		this.data = data;
 		this.next = next;
 	}
-
+	
 	public T getData() {
 		return data;
 	}

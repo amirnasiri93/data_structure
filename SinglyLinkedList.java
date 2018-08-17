@@ -1,12 +1,14 @@
 
 public class SinglyLinkedList<T> {
-
+	// the head of the singly linked list.
 	private NodeSLL<T> head;
 
+	// constructor
 	public SinglyLinkedList() {
 		this.head = null;
 	}
 
+	// constructor
 	public SinglyLinkedList(NodeSLL<T> head) {
 		this.head = head;
 	}
@@ -19,6 +21,9 @@ public class SinglyLinkedList<T> {
 		this.head = head;
 	}
 
+	/**
+	 * Traverses and prints out all the elements in the list.
+	 */
 	public void traverse() {
 		if (head == null)
 			System.out.println("No element exists in the list.");
@@ -34,6 +39,11 @@ public class SinglyLinkedList<T> {
 
 	}
 
+	/**
+	 * returns the number of elements in the list.
+	 * 
+	 * @return
+	 */
 	public int size() {
 		int counter = 0;
 		if (head == null) {
@@ -51,6 +61,11 @@ public class SinglyLinkedList<T> {
 		return counter;
 	}
 
+	/**
+	 * Inserts an element at the head of the list.
+	 * 
+	 * @param element
+	 */
 	public void insertAtHead(NodeSLL<T> element) {
 		if (head == null)
 			head = element;
@@ -60,6 +75,11 @@ public class SinglyLinkedList<T> {
 		}
 	}
 
+	/**
+	 * Inserts an element at the tail of the list.
+	 * 
+	 * @param element
+	 */
 	public void insertAtTail(NodeSLL<T> element) {
 		if (head == null)
 			head = element;
@@ -73,11 +93,12 @@ public class SinglyLinkedList<T> {
 
 	}
 
-	@Override
-	public String toString() {
-		return "SinglyLinkedList [head=" + head + "]";
-	}
-
+	/**
+	 * Searches for a specific element and returns it if it exists in the list.
+	 * 
+	 * @param element
+	 * @return
+	 */
 	public NodeSLL<T> search(NodeSLL<T> element) {
 		if (head == null) {
 			return null;
@@ -95,6 +116,11 @@ public class SinglyLinkedList<T> {
 			}
 			return null;
 		}
+	}
+
+	@Override
+	public String toString() {
+		return "SinglyLinkedList [head=" + head + "]";
 	}
 
 }
