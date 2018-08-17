@@ -1,4 +1,4 @@
-package com.datastructure.amirnasiri;
+package com.datastructure.taj93;
 
 public class DoublyLinkedList<T> {
 	// The head and tail element.
