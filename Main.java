@@ -18,6 +18,26 @@ public class Main {
 		// System.out.println();
 		// list.traverse();
 		// System.out.println(list.size());
+		StackCDT<String> stack = new StackCDT<>();
+		System.out.println(stack.top() + "    " + stack.size());
+		stack.push("a");
+		System.out.println(stack.top() + "    " + stack.size());
+		stack.push("b");
+		System.out.println(stack.top() + "    " + stack.size());
+		stack.pop();
+		System.out.println(stack.top() + "    " + stack.size());
+		stack.pop();
+		System.out.println(stack.top() + "    " + stack.size());
+		System.out.println();
+		System.out.println(stack.top() + "    " + stack.size());
+		stack.push("a");
+		System.out.println(stack.top() + "    " + stack.size());
+		stack.push("b");
+		System.out.println(stack.top() + "    " + stack.size());
+		stack.pop();
+		System.out.println(stack.top() + "    " + stack.size());
+		stack.pop();
+		System.out.println(stack.top() + "    " + stack.size());
 
 	}
 }
