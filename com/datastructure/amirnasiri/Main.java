@@ -44,24 +44,44 @@ public class Main {
 		// System.out.println(stack.top() + " " + stack.size());
 
 		// Doubly Linked List:
-		DoublyLinkedList<String> list = new DoublyLinkedList<>();
-		// System.out.println(list.getSize());
-		list.addBeforeTail(new NodeDLL<String>("H1"));
-		// System.out.println(list.getSize());
-		list.addBeforeTail(new NodeDLL<String>("H2"));
-		// System.out.println(list.getSize());
-		list.addAfterHead(new NodeDLL<String>("H3"));
-		// System.out.println(list.getSize());
-		list.addAfterHead(new NodeDLL<String>("H4"));
-		// System.out.println(list.getSize());
-		list.addBeforeTail(new NodeDLL<String>("H0"));
-		// System.out.println(list.getSize());
-		list.traverse();
-		System.out.println("\nremoveTail: ");
-		System.out.println("removed: " + list.removeTail());
-		list.traverse();
-		System.out.println("\nremoveHead: ");
-		System.out.println("removed: " + list.removeHead());
-		list.traverse();
+		// DoublyLinkedList<String> list = new DoublyLinkedList<>();
+		// // System.out.println(list.getSize());
+		// list.addBeforeTail(new NodeDLL<String>("H1"));
+		// // System.out.println(list.getSize());
+		// list.addBeforeTail(new NodeDLL<String>("H2"));
+		// // System.out.println(list.getSize());
+		// list.addAfterHead(new NodeDLL<String>("H3"));
+		// // System.out.println(list.getSize());
+		// list.addAfterHead(new NodeDLL<String>("H4"));
+		// // System.out.println(list.getSize());
+		// list.addBeforeTail(new NodeDLL<String>("H0"));
+		// // System.out.println(list.getSize());
+		// list.traverse();
+		// System.out.println("\nremovedTail: ");
+		// System.out.println("removed: " + list.removeTail());
+		// list.traverse();
+		// System.out.println("\nremovedHead: ");
+		// System.out.println("removed: " + list.removeHead());
+		// list.traverse();
+
+		Queue<String> queue = new Queue<>();
+		queue.enqueue(new NodeDLL<String>("h1"));
+		queue.enqueue(new NodeDLL<String>("h2"));
+		queue.enqueue(new NodeDLL<String>("h3"));
+		queue.display();
+		queue.dequeue();
+		System.out.println();
+		queue.display();
+		queue.dequeue();
+		System.out.println();
+		queue.display();
+		System.out.println(queue.dequeue());
+		System.out.println();
+		queue.display();
+		queue.enqueue(new NodeDLL<String>("h1"));
+		queue.enqueue(new NodeDLL<String>("h2"));
+		queue.enqueue(new NodeDLL<String>("h3"));
+		System.out.println();
+		queue.display();
 	}
 }

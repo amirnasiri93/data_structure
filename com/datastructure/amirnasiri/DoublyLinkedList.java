@@ -100,14 +100,16 @@ public class DoublyLinkedList<T> {
 	// it prints all the elements in the list.
 	public void traverse() {
 		if (tail == null) {
+			System.out.println("There are no elements in the list.");
 		} else {
+
 			NodeDLL<T> current = tail;
 			System.out.println(current);
 			while (current.hasNext()) {
-
 				current = current.getNext();
 				System.out.println(current);
 			}
+
 		}
 	}
 
