@@ -45,18 +45,23 @@ public class Main {
 
 		// Doubly Linked List:
 		DoublyLinkedList<String> list = new DoublyLinkedList<>();
+		// System.out.println(list.getSize());
 		list.addBeforeTail(new NodeDLL<String>("H1"));
+		// System.out.println(list.getSize());
 		list.addBeforeTail(new NodeDLL<String>("H2"));
+		// System.out.println(list.getSize());
 		list.addAfterHead(new NodeDLL<String>("H3"));
+		// System.out.println(list.getSize());
 		list.addAfterHead(new NodeDLL<String>("H4"));
+		// System.out.println(list.getSize());
 		list.addBeforeTail(new NodeDLL<String>("H0"));
+		// System.out.println(list.getSize());
 		list.traverse();
-		list.removeTail();
-		System.out.println("\n\n");
+		System.out.println("\nremoveTail: ");
+		System.out.println("removed: " + list.removeTail());
 		list.traverse();
-
-		list.removeHead();
-		System.out.println("\n\n");
+		System.out.println("\nremoveHead: ");
+		System.out.println("removed: " + list.removeHead());
 		list.traverse();
 	}
 }

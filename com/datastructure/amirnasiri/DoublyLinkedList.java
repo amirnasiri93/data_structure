@@ -5,12 +5,14 @@ public class DoublyLinkedList<T> {
 	private NodeDLL<T> head, tail;
 	private int size;
 
+	// constructor
 	public DoublyLinkedList() {
 		tail = null;
 		head = null;
 		size = 0;
 	}
 
+	// add a node after node.
 	public void addAfterHead(NodeDLL<T> element) {
 		size++;
 		if (head == null && tail == null) {
@@ -31,24 +33,29 @@ public class DoublyLinkedList<T> {
 		// "\n");
 	}
 
-	public void removeHead() {
+	// remove a node after head.
+	public NodeDLL<T> removeHead() {
 		// if size ==1 then you must change both head and tail.
 		if (size == 0) {
-			// return null.
+			return null;
 		} else if (size == 1) {
 			size--;
+			NodeDLL<T> temp = tail;
 			head = null;
 			tail = null;
-			// return head.
+			return temp;
 		} else {
 			size--;
+			NodeDLL<T> temp = head;
 			NodeDLL<T> element = head.getPre();
 			element.setNext(null);
 			head = element;
+			return temp;
 		}
 
 	}
 
+	// add a node before tail
 	public void addBeforeTail(NodeDLL<T> element) {
 		size++;
 		if (head == null && tail == null) {
@@ -69,23 +76,28 @@ public class DoublyLinkedList<T> {
 		// "\n");
 	}
 
-	public void removeTail() {
+	// remove the tail
+	public NodeDLL<T> removeTail() {
 		// if size ==1 then you must change both head and tail.
 		if (size == 0) {
-			// return null.
+			return null;
 		} else if (size == 1) {
 			size--;
+			NodeDLL<T> temp = tail;
 			head = null;
 			tail = null;
-			// return tail.
+			return temp;
 		} else {
 			size--;
 			NodeDLL<T> element = tail.getNext();
 			element.setPre(null);
+			NodeDLL<T> temp = tail;
 			tail = element;
+			return temp;
 		}
 	}
 
+	// it prints all the elements in the list.
 	public void traverse() {
 		if (tail == null) {
 		} else {
@@ -99,6 +111,7 @@ public class DoublyLinkedList<T> {
 		}
 	}
 
+	// returns the size of the list.
 	public int size() {
 		return size;
 	}
@@ -118,6 +131,14 @@ public class DoublyLinkedList<T> {
 
 	public void setTail(NodeDLL<T> tail) {
 		this.tail = tail;
+	}
+
+	public int getSize() {
+		return size;
+	}
+
+	public void setSize(int size) {
+		this.size = size;
 	}
 
 }
