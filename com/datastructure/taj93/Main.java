@@ -64,24 +64,34 @@ public class Main {
 		// System.out.println("removed: " + list.removeHead());
 		// list.traverse();
 
-		Queue<String> queue = new Queue<>();
-		queue.enqueue(new NodeDLL<String>("h1"));
-		queue.enqueue(new NodeDLL<String>("h2"));
-		queue.enqueue(new NodeDLL<String>("h3"));
-		queue.display();
-		queue.dequeue();
-		System.out.println();
-		queue.display();
-		queue.dequeue();
-		System.out.println();
-		queue.display();
-		System.out.println(queue.dequeue());
-		System.out.println();
-		queue.display();
-		queue.enqueue(new NodeDLL<String>("h1"));
-		queue.enqueue(new NodeDLL<String>("h2"));
-		queue.enqueue(new NodeDLL<String>("h3"));
-		System.out.println();
-		queue.display();
+		// Queue<String> queue = new Queue<>();
+		// queue.enqueue(new NodeDLL<String>("h1"));
+		// queue.enqueue(new NodeDLL<String>("h2"));
+		// queue.enqueue(new NodeDLL<String>("h3"));
+		// queue.display();
+		// queue.dequeue();
+		// System.out.println();
+		// queue.display();
+		// queue.dequeue();
+		// System.out.println();
+		// queue.display();
+		// System.out.println(queue.dequeue());
+		// System.out.println();
+		// queue.display();
+		// queue.enqueue(new NodeDLL<String>("h1"));
+		// queue.enqueue(new NodeDLL<String>("h2"));
+		// queue.enqueue(new NodeDLL<String>("h3"));
+		// System.out.println();
+		// queue.display();
+
+		TreeNode<Integer> root = new TreeNode<Integer>(1, true);
+		TreeNode<Integer> two = new TreeNode<>(2);
+		TreeNode<Integer> three = new TreeNode<>(3);
+		root.addChild(two);
+		root.addChild(three);
+		two.addChild(new TreeNode<>(4));
+		two.addChild(new TreeNode<>(5));
+		InOrderTraversal<Integer> inorder = new InOrderTraversal<>(root);
+		inorder.traversal();
 	}
 }

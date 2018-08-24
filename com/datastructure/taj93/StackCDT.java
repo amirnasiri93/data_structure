@@ -1,4 +1,5 @@
 package com.datastructure.taj93;
+
 /**
  * @author amirnasiri This class creates a StackCDT. Date: 17/08/18
  */
@@ -23,7 +24,6 @@ public class StackCDT<T> {
 	 * @param elem
 	 */
 	public void push(T elem) {
-
 		if (array.length == current_array_length) {
 			Object[] myArray = new Object[array.length + 10];
 			current_array_length = array.length + 10;
